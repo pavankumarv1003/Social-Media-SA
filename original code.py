@@ -11,14 +11,14 @@ import asyncio
 import asyncpraw
 
 # Initialize YouTube API
-YOUTUBE_API_KEY = 'AIzaSyAZVZl3zsxzxHuUopRE4IxK7324G9JlkiY'  # Replace with your YouTube API Key
+YOUTUBE_API_KEY = 'AIzaSyAZVZl3zsxzxHuUopRE4IxK7324G9JlkiY'  
 youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
 
 # Initialize Reddit API
 async def reddit_client():
     return asyncpraw.Reddit(
-        client_id="G0RYgpD26mS_rdPZ96cjrw",  # Replace with your client ID
-        client_secret="F3WDnmx2BRLSXNG5At85GHp__8XBBg",  # Replace with your client secret
+        client_id="G0RYgpD26mS_rdPZ96cjrw",  
+        client_secret="F3WDnmx2BRLSXNG5At85GHp__8XBBg",  
         user_agent="Python:UnifiedSentimentAnalyzer:v1.0 (by /u/yourusername)"
     )
 
@@ -126,5 +126,4 @@ async def main():
     else:
         print("Invalid choice. Exiting.")
 
-# Run the main function
 await main()
